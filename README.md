@@ -17,33 +17,6 @@ Instala o Zabbix Agent
 Configura o serviço
 Libera comunicação com o servidor Zabbix
 
-
-📁 Estrutura do Projeto
-ansible_with_terraform/
-│
-├── ansible/
-│   ├── inventory        # Hosts gerados para o Ansible
-│   ├── playbook.yml     # Playbook principal
-│   ├── vars.yml         # Variáveis do Ansible
-│   └── terraform.tfstate # (provavelmente usado para extrair IP)
-│
-├── terraform/
-│   ├── main.tf          # Orquestra os módulos
-│   ├── variables.tf     # Variáveis globais
-│   ├── outputs.tf       # Outputs (ex: IP da EC2)
-│   ├── .terraform/      # Dependências
-│   │
-│   ├── module/
-│   │   ├── vpc/         # Criação da VPC
-│   │   ├── sg/          # Security Group
-│   │   └── ec2/         # Instância EC2
-│   │
-│   ├── terraform.tfstate
-│   └── terraform.tfstate.backup
-│
-└── .gitignore
-
-
 🧱 Tecnologias Utilizadas
 
 Terraform → Provisionamento de infraestrutura (IaC)
